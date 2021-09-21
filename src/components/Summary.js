@@ -11,7 +11,7 @@ const Summary = () => {
 
   return (
     <View style={styles.main}>
-      <CardHeader location={state.location} />
+      <CardHeader location={state.location} isMobile={state.isMobile} />
       <ShortForecast data={state.forecast.periods[0]} />
       <CardFooter data={state.forecast.periods[0]} />
     </View>

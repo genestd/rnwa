@@ -2,12 +2,16 @@ import React from 'react'
 import { StyleSheet, View, Text } from 'react-native'
 import { format } from 'date-fns'
 
-const CardHeader = ({ location }) => (
+const CardHeader = ({ location, isMobile }) => (
   <View style={styles.flex}>
-    <Text style={styles.title}>{format(Date.now(), 'EEEE, LLLL do yyyy')}</Text>
+    <Text style={styles.title}>{format(Date.now(), getDateFormat(isMobile))}</Text>
     <Text style={styles.subtitle}>{location.city}, {location.state}</Text>
   </View>
 )
+
+const getDateFormat = isMobile => {
+  return isMobile ? 'EEEE, MMM do yyyy' : 'EEEE, LLLL do yyyy'
+}
   
 
 const styles = StyleSheet.create({

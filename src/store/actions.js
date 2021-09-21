@@ -1,3 +1,9 @@
+export const SET_DEVICE_SIZE = 'SET_DEVICE_SIZE'
+export const setDeviceSize = (dispatch, mobile) => dispatch({
+  type: SET_DEVICE_SIZE,
+  payload: mobile
+})
+
 export const SET_COORDINATES = 'SET_COORDINATES'
 export const setCoordinates = (dispatch, coordinates) => dispatch({
   type: SET_COORDINATES,

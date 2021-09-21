@@ -1,10 +1,17 @@
 import INITIAL_STATE from './initialState'
-import { SET_FORECAST, SET_COORDINATES, SET_MESSAGE, SET_LOCATION } from './actions'
+import { SET_DEVICE_SIZE, SET_FORECAST, SET_COORDINATES, SET_MESSAGE,
+  SET_LOCATION } from './actions'
 import { setForecast, setCoordinates } from './operations'
 
 const reducer = (state = INITIAL_STATE, action) => {
   console.log(action)
   switch (action.type) {
+    case SET_DEVICE_SIZE:
+      return {
+        ...state,
+        isMobile: action.payload
+      }
+      
     case SET_COORDINATES:
       return setCoordinates(state, action)
 
