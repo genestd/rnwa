@@ -1,5 +1,6 @@
 export default {
-  message: 'Waiting...',
+  message: 'Checking permissions...',
   locationIsSet: false,
+  forecastIsSet: false,
   location: null
 }
