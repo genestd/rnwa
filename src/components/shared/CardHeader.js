@@ -10,7 +10,7 @@ const CardHeader = ({ location, isMobile }) => (
 )
 
 const getDateFormat = isMobile => {
-  return isMobile ? 'EEEE, MMM do yyyy' : 'EEEE, LLLL do yyyy'
+  return isMobile ? 'EEEE, MMM do' : 'EEEE, LLLL do yyyy'
 }
   
 
@@ -21,12 +21,12 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   title: {
-    fontFamily: 'Inter_400Regular, Sans Serif',
+    fontFamily: 'Inter_400Regular',
     color: '#fff',
     fontSize: 24
   },
   subtitle: {
-    fontFamily: 'Inter_400Regular, Sans Serif',
+    fontFamily: 'Inter_400Regular',
     color: '#fff',
     fontSize: 18,
     padding: 10

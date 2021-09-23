@@ -3,7 +3,7 @@ import '@expo/match-media'
 import { useMediaQuery } from "react-responsive"
 import React, {useContext, useEffect} from 'react';
 import * as Location from 'expo-location';
-import { StyleSheet, Text } from 'react-native';
+import { StyleSheet, Text, SafeAreaView } from 'react-native';
 import { WeatherAppContext } from '../store/WeatherAppContext'
 import { setForecast, setCoordinates, setMessage, setLocation, setDeviceSize } from '../store/actions'
 import { getForecastByUrl, getGridPoints } from '../store/weather-service'
@@ -48,7 +48,8 @@ export default function Home() {
   }, []);
 
   return (
-    <LinearGradient colors={['#859398', '#283048']} style={styles.container}>
+    <LinearGradient colors={['#859398', '#283048']} style={{ flex: 1 }}>
+      <SafeAreaView style={styles.container}>
         {state.locationIsSet && state.forecastIsSet ?
           (<>
             <Summary />
@@ -57,6 +58,7 @@ export default function Home() {
           <Text style={{fontFamily: 'Inter_400Regular', fontSize: 24}}>{state.message}</Text>
         }
         <StatusBar style="auto" />
+      </SafeAreaView>
     </LinearGradient>
   );
 }

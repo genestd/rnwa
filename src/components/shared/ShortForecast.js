@@ -22,12 +22,12 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start'
   },
   extraLarge: {
-    fontFamily: 'Inter_400Regular, Sans Serif',
+    fontFamily: 'Inter_400Regular',
     color: '#fff',
     fontSize: 72,
   },
   large: {
-    fontFamily: 'Inter_400Regular, Sans Serif',
+    fontFamily: 'Inter_400Regular',
     color: '#fff',
     fontSize: 60,
   },

@@ -19,14 +19,14 @@ const styles = StyleSheet.create({
     fontSize: 16
   },
   footer: {
-    fontFamily: 'Inter_400Regular, Sans Serif',
-    color: 'inherit',
-    fontSize: 'inherit'
+    fontFamily: 'Inter_400Regular',
+    color: '#fff',
+    fontSize: 16
   },
   bold: {
     fontFamily: 'Inter_700Bold',
-    color: 'inherit',
-    fontSize: 'inherit'
+    color: '#fff',
+    fontSize: 16
   }
 });
 
